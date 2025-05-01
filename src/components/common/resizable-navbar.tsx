@@ -3,9 +3,10 @@ import { cn } from "@/lib/utils";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import Image from "next/image";
-import LOGO from "@/../public/MCMU_LOGO.png";
+import LOGO from "@/../public/LOGOS/MCMU_LOGO_WHITE.png";
 
 import React, { useRef, useState } from "react";
+import Link from "next/link";
 
 
 interface NavbarProps {
@@ -84,7 +85,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
   return (
     <motion.div
       animate={{
-        backdropFilter: visible ? "blur(5px)" : "blur(10px)",
+        backdropFilter: visible ? "blur(20px)" : "blur(10px)",
         boxShadow: visible
           ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
           : "none",
@@ -122,7 +123,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
       )}
     >
       {items.map((item, idx) => (
-        <a
+        <Link
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
           className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
@@ -136,7 +137,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             />
           )}*/}
           <span className="relative z-20 hover:text-primary">{item.name}</span>
-        </a>
+        </Link>
       ))}
     </motion.div>
   );
@@ -146,15 +147,14 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
   return (
     <motion.div
       animate={{
-        backdropFilter: visible ? "blur(10px)" : "none",
+        backdropFilter: visible ? "blur(10px)" : "blur(5px)",
         boxShadow: visible
           ? "0 0 24px rgba(34, 42, 53, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(34, 42, 53, 0.04), 0 0 4px rgba(34, 42, 53, 0.08), 0 16px 68px rgba(47, 48, 55, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset"
           : "none",
         width: visible ? "90%" : "100%",
-        paddingRight: visible ? "12px" : "0px",
-        paddingLeft: visible ? "12px" : "0px",
-        borderRadius: visible ? "4px" : "2rem",
-        y: visible ? 20 : 0,
+        paddingRight: visible ? "12px" : "10px",
+        paddingLeft: visible ? "8px" : "0px",
+        y: visible ? 5 : 0,
       }}
       transition={{
         type: "spring",
@@ -229,8 +229,8 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
   return (
-    <a
-      href="#"
+    <Link
+      href="/"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
       <Image
@@ -238,7 +238,7 @@ export const NavbarLogo = () => {
         alt="logo"
         width={160}
       />
-    </a>
+    </Link>
   );
 };
 

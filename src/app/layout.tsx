@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar_Main from "@/components/main/NavBar";
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import { Cabin } from "next/font/google";
+import { Hubot_Sans } from "next/font/google";
+import Lenis from 'lenis';
+import SmoothScrolling from "@/components/common/smooth-scrolling";
 
-const cabinSans = Cabin({
-  variable: "--font-cabin-sans",
+const cabinSans = Hubot_Sans({
   subsets: ["latin"],
 });
 
@@ -21,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${cabinSans.variable } antialiased`}>
+      <body className={`${cabinSans.className } antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -29,7 +30,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Navbar_Main />
+          <SmoothScrolling >
           {children}
+          </SmoothScrolling>
         </ThemeProvider>
       </body>
     </html>
