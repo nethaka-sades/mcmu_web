@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 import { Hubot_Sans } from "next/font/google";
 import Lenis from 'lenis';
 import SmoothScrolling from "@/components/common/smooth-scrolling";
+import { BoxReveal } from "@/components/common/box-reveal";
+import { Footer } from "@/components/main/Footer";
 
 const cabinSans = Hubot_Sans({
   subsets: ["latin"],
@@ -33,6 +35,7 @@ export default function RootLayout({
           <SmoothScrolling >
           {children}
           </SmoothScrolling>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

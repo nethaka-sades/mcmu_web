@@ -3,12 +3,14 @@ import { cn } from "@/lib/utils";
 import Noise from "@/components/common/noise";
 import { MarqueeDemo } from "@/components/main/LogoSlider";
 import { FeaturesBento } from "@/components/main/FeaturesBento";
+import { AboutusComp } from "@/components/main/AboutusComp";
+import TeamComp from "@/components/main/TeamComp";
 
 
 export default function Home() {
   return (
     <main>
-      <div className="fixed inset-0 z-0 opacity-50">
+      <div className="fixed inset-0 z-0 opacity-75">
         <Noise
           patternSize={250}
           patternScaleX={1}
@@ -30,6 +32,8 @@ export default function Home() {
         <Hero />
         <MarqueeDemo />
         <FeaturesBento />
+        <AboutusComp />
+        <TeamComp />
       </div>
     </main>
   );

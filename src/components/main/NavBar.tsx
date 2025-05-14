@@ -11,23 +11,24 @@ import {
 } from "@/components/common/resizable-navbar";
 import { useState } from "react";
 import { LiveButton } from "../common/livebtn";
+import { BoxReveal } from "../common/box-reveal";
 
 export default function Navbar_Main() {
   const navItems = [
     {
-      name: "MCPAS",
+      name: "ABOUT",
       link: "#features",
     },
     {
-      name: "MCRC",
+      name: "COMMITTEE",
       link: "#pricing",
     },
     {
-      name: "MCODS",
+      name: "PROJECTS",
       link: "#contact",
     },
     {
-      name: "TV Mahanama",
+      name: "CONTACT",
       link: "#contact",
     },
   ];
@@ -41,9 +42,7 @@ export default function Navbar_Main() {
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-          <div className="flex items-center gap-4">
             <LiveButton />
-          </div>
         </NavBody>
 
         {/* Mobile Navigation */}
@@ -71,7 +70,7 @@ export default function Navbar_Main() {
               </a>
             ))}
             <div className="flex w-full flex-col gap-4">
-            <LiveButton />
+              <LiveButton />
             </div>
           </MobileNavMenu>
         </MobileNav>
