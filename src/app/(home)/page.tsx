@@ -10,15 +10,7 @@ import TeamComp from "@/components/main/TeamComp";
 export default function Home() {
   return (
     <main>
-      <div className="fixed inset-0 z-0 opacity-75">
-        <Noise
-          patternSize={250}
-          patternScaleX={1}
-          patternScaleY={1}
-          patternRefreshInterval={2}
-          patternAlpha={15}
-        />
-      </div>
+      
       <div
         className={cn(
           "fixed inset-0 opacity-15",

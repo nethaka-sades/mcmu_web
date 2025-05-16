@@ -5,6 +5,7 @@ import { JSX, useEffect, useRef } from "react";
 
 interface BoxRevealProps {
   children: JSX.Element;
+  className?: string;
   width?: "fit-content" | "100%";
   duration?: number;
   direction?: "top" | "bottom";
@@ -12,6 +13,7 @@ interface BoxRevealProps {
 
 export const BoxReveal = ({
   children,
+  className,
   width = "fit-content",
   duration,
   direction = "bottom",
@@ -50,6 +52,7 @@ export const BoxReveal = ({
         initial="hidden"
         animate={mainControls}
         transition={{ duration: duration ? duration : 0.5, delay: 0.25 }}
+        className={className}
       >
         {children}
       </motion.div>
