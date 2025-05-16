@@ -17,19 +17,23 @@ export default function Navbar_Main() {
   const navItems = [
     {
       name: "ABOUT",
-      link: "#features",
+      link: "/about",
     },
     {
       name: "COMMITTEE",
-      link: "#pricing",
+      link: "/com",
     },
     {
       name: "PROJECTS",
-      link: "#contact",
+      link: "/projects",
     },
     {
       name: "CONTACT",
-      link: "#contact",
+      link: "/contact",
+    },
+    {
+      name: "NETWORK",
+      link: "/network",
     },
   ];
 
@@ -42,7 +46,7 @@ export default function Navbar_Main() {
         <NavBody>
           <NavbarLogo />
           <NavItems items={navItems} />
-            <LiveButton />
+          <LiveButton />
         </NavBody>
 
         {/* Mobile Navigation */}

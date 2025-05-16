@@ -1,6 +1,8 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 interface LiveButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -14,6 +16,7 @@ const LiveButton = React.forwardRef<
   return (
   <div>
     {is_live === "true" ? (
+      <Link href={"/fm"}>
     <button
       ref={ref}
       className={cn(
@@ -30,6 +33,7 @@ const LiveButton = React.forwardRef<
       </div>
       <div className="absolute left-[20%] top-[40%] h-2 w-2 scale-[1] rounded-full bg-destructive transition-all duration-300 group-hover:left-[0%] group-hover:top-[0%] group-hover:h-full group-hover:w-full group-hover:scale-[1.8] group-hover:bg-destructive"></div>
     </button>
+    </Link>
     ):(
       <button
       ref={ref}
