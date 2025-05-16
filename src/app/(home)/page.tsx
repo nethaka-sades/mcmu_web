@@ -5,12 +5,13 @@ import { MarqueeDemo } from "@/components/main/LogoSlider";
 import { FeaturesBento } from "@/components/main/FeaturesBento";
 import { AboutusComp } from "@/components/main/AboutusComp";
 import TeamComp from "@/components/main/TeamComp";
-
+import UnderDev from "@/components/common/under_dev";
+import MCMU_LayOut from "@/components/Layouts/MCMU_Layout";
 
 export default function Home() {
   return (
+    <MCMU_LayOut>
     <main>
-      
       <div
         className={cn(
           "fixed inset-0 opacity-15",
@@ -28,5 +29,6 @@ export default function Home() {
         <TeamComp />
       </div>
     </main>
+    </MCMU_LayOut>
   );
 }

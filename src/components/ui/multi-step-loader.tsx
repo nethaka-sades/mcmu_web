@@ -50,7 +50,7 @@ const LoaderCore = ({
     <div className="flex relative justify-start max-w-xl mx-auto flex-col mt-40">
       {loadingStates.map((loadingState, index) => {
         const distance = Math.abs(index - value);
-        const opacity = Math.max(1 - distance * 0.2, 0); // Minimum opacity is 0, keep it 0.2 if you're sane.
+        const opacity = Math.max(1 - distance * 0.2, 0);
 
         return (
           <motion.div
@@ -96,45 +96,53 @@ export const MultiStepLoader = ({
   loop = true,
 }: {
   loadingStates: LoadingState[];
-  loading?: boolean;
+  loading: boolean;
   duration?: number;
   loop?: boolean;
 }) => {
   const [currentState, setCurrentState] = useState(0);
+  const [isLoading, setIsLoading] = useState(loading);
 
   useEffect(() => {
+    setIsLoading(loading);
     if (!loading) {
       setCurrentState(0);
       return;
     }
+
     const timeout = setTimeout(() => {
-      setCurrentState((prevState) =>
-        loop
+      setCurrentState((prevState) => {
+        if (!loop && prevState === loadingStates.length - 1) {
+          setIsLoading(false);
+          return prevState;
+        }
+        return loop
           ? prevState === loadingStates.length - 1
             ? 0
             : prevState + 1
-          : Math.min(prevState + 1, loadingStates.length - 1)
-      );
+          : Math.min(prevState + 1, loadingStates.length - 1);
+      });
     }, duration);
 
     return () => clearTimeout(timeout);
   }, [currentState, loading, loop, loadingStates.length, duration]);
+
   return (
     <AnimatePresence mode="wait">
-      {loading && (
+      {isLoading && (
         <motion.div
           initial={{
             opacity: 0,
           }}
           animate={{
-            opacity: 1,
+            opacity:1,
           }}
           exit={{
             opacity: 0,
           }}
           className="w-full h-full fixed inset-0 z-[100] flex items-center justify-center backdrop-blur-2xl"
         >
-          <div className="h-96  relative">
+          <div className="h-96 relative">
             <LoaderCore value={currentState} loadingStates={loadingStates} />
           </div>
 
