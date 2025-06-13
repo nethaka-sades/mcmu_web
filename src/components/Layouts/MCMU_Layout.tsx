@@ -16,7 +16,6 @@ export default function MCMU_LayOut({ children }: LayoutProps) {
       enableSystem
       disableTransitionOnChange
     >
-      <UnderDev />
       <Navbar_Main />
       <SmoothScrolling>
       {children}

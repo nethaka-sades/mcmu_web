@@ -135,9 +135,6 @@ function StackedCircularFooter() {
             <Header>
               <HeaderTitle>mahanamasmedia@gmail.com</HeaderTitle>
             </Header>
-            <Header>
-              <HeaderTitle>(+94) 76 032 5065</HeaderTitle>
-            </Header>
           </div>
           <div className="text-center">
             <p className="text-sm text-muted-foreground">
