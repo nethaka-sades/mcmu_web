@@ -104,7 +104,7 @@ export default function About() {
                 <p className="text-muted-foreground">Get to know the passionate students and dedicated staff who drive the Mahanama College Media Unit forward.</p>
               </div>
               <InteractiveHoverButton className="mr-auto mt-10">
-                <Link href={"/commitee"}>MEET THE TEAM</Link>
+                <Link href={"/committee"}>MEET THE TEAM</Link>
               </InteractiveHoverButton>
             </div>
             <img
