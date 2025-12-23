@@ -1,14 +1,13 @@
-import SmoothScrolling from "../common/smooth-scrolling";
-import UnderDev from "../common/under_dev";
-import { Footer } from "../main/Footer";
-import Navbar_Main from "../main/NavBar";
-import { ThemeProvider } from "../ui/theme-provider";
+import SmoothScrolling from "../../components/common/smooth-scrolling";
+import { Footer } from "../../components/main/Footer";
+import Navbar_Main from "../../components/main/NavBar";
+import { ThemeProvider } from "../../components/ui/theme-provider";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-export default function MCMU_LayOut({ children }: LayoutProps) {
+export default function LayOut({ children }: LayoutProps) {
   return (
     <ThemeProvider
       attribute="class"

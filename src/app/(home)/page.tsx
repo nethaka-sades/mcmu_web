@@ -1,16 +1,13 @@
 import { Hero } from "@/components/main/Hero";
 import { cn } from "@/lib/utils";
-import Noise from "@/components/common/noise";
 import { MarqueeDemo } from "@/components/main/LogoSlider";
 import { FeaturesBento } from "@/components/main/FeaturesBento";
 import { AboutusComp } from "@/components/main/AboutusComp";
 import TeamComp from "@/components/main/TeamComp";
-import UnderDev from "@/components/common/under_dev";
-import MCMU_LayOut from "@/components/Layouts/MCMU_Layout";
+import NetworkComp from "@/components/main/NetworkComp";
 
 export default function Home() {
   return (
-    <MCMU_LayOut>
     <main>
       <div
         className={cn(
@@ -24,11 +21,11 @@ export default function Home() {
       <div className="min-h-screen flex flex-col items-center justify-center">
         <Hero />
         <MarqueeDemo />
-        <FeaturesBento />
+        {/*<FeaturesBento />*/}
+        <NetworkComp />
         <AboutusComp />
         <TeamComp />
       </div>
     </main>
-    </MCMU_LayOut>
   );
 }
