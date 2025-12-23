@@ -17,7 +17,7 @@ const team = [
     name: "Nethaka De Saram",
     role: "President",
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+      "/PFPS/nethaka.jpg",
   },
   {
     name: "Pabasara Warnajith",
@@ -44,7 +44,7 @@ export default function TeamComp() {
         </div>
         </BoxReveal>
 
-        <BoxReveal duration={0.5}>
+        <BoxReveal duration={0.5} delay={0.75}>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-32">
           {team.map((member) => (
             <div key={member.name} className="flex flex-col items-center">
@@ -54,7 +54,7 @@ export default function TeamComp() {
               </Avatar>
               <div className="mt-4 text-center">
                 <h3 className="font-medium">{member.name}</h3>
-                <p className="text-sm text-accent mt-1">
+                <p className="text-sm text-accent">
                   {member.role}
                 </p>
               </div>
@@ -63,7 +63,7 @@ export default function TeamComp() {
         </div>
         </BoxReveal>
         <InteractiveHoverButton className="mt-10">
-          <Link href={"/com"}>MEET THE COMMITTEE</Link>
+          <Link href={"/committee"}>MEET THE COMMITTEE</Link>
         </InteractiveHoverButton>
       </div>
     </section>
