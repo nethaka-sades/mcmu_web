@@ -24,10 +24,6 @@ export default function Navbar_Main() {
       link: "/committee",
     },
     {
-      name: "PROJECTS",
-      link: "/projects",
-    },
-    {
       name: "CONTACT",
       link: "/contact",
     },
