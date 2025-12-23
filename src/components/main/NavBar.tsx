@@ -21,7 +21,7 @@ export default function Navbar_Main() {
     },
     {
       name: "COMMITTEE",
-      link: "/com",
+      link: "/committee",
     },
     {
       name: "PROJECTS",

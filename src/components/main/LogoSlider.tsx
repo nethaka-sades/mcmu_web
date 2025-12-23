@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export function MarqueeDemo() {
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden py-10 bg-background border-y border-white/50">
+    <section className="relative flex w-full flex-col items-center justify-center overflow-hidden py-10 bg-background border-y border-white/50">
         <div className="text-white/50 text-xl text-center pb-5">In Collaboration With</div>
       <Marquee pauseOnHover className="[--duration:20s] space-x-5 px-10">
         <Link href={"/mcpas"}><Image src={MCPAS_LOGO} alt="MCRC Logo" width={150} height={25} className="mx-5 opacity-50 hover:opacity-100" /></Link>
@@ -23,6 +23,6 @@ export function MarqueeDemo() {
       </Marquee>
       <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
       <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
-    </div>
+    </section>
   );
 }
