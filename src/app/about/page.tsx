@@ -7,27 +7,7 @@ import { InteractiveHoverButton } from "../../components/common/interactivehover
 import Link from "next/link";
 import { Header, HeaderTitle } from "../../components/common/header";
 
-interface About3Props {
-  mainImage?: {
-    src: string;
-    alt: string;
-  };
-  secondaryImage?: {
-    src: string;
-    alt: string;
-  };
-}
-
-export default function About({
-  mainImage = {
-    src: "https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg",
-    alt: "placeholder",
-  },
-  secondaryImage = {
-    src: "/images/about_secondary_image.jpg",
-    alt: "placeholder",
-  },
-}: About3Props = {}) {
+export default function About() {
   return (
     <main className="px-10">
       <div
@@ -113,8 +93,8 @@ export default function About({
         </section>
         <div className="grid gap-7 lg:grid-cols-3">
           <img
-            src={mainImage.src}
-            alt={mainImage.alt}
+            src={"https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-1.svg"}
+            alt={"placeholder"}
             className="size-full max-h-[620px] rounded-xl object-cover lg:col-span-2"
           />
           <div className="flex flex-col gap-7 md:flex-row lg:flex-col">
@@ -128,8 +108,8 @@ export default function About({
               </InteractiveHoverButton>
             </div>
             <img
-              src={secondaryImage.src}
-              alt={secondaryImage.alt}
+              src={"/images/about_secondary_image.jpg"}
+              alt={"placeholder"}
               className="grow basis-0 rounded-xl object-cover md:w-1/2 lg:min-h-0 lg:w-auto"
             />
           </div>
