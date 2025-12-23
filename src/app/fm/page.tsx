@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Hls from "hls.js";
-import UnderDev from "@/components/common/under_dev";
+import UnderDev from "@/components/common/Under_Dev";
 
 export default function Player() {
   const audioRef = useRef<HTMLAudioElement>(null);
