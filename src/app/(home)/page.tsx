@@ -1,7 +1,6 @@
 import { Hero } from "@/components/main/Hero";
 import { cn } from "@/lib/utils";
 import { MarqueeDemo } from "@/components/main/LogoSlider";
-import { FeaturesBento } from "@/components/main/FeaturesBento";
 import { AboutusComp } from "@/components/main/AboutusComp";
 import TeamComp from "@/components/main/TeamComp";
 import NetworkComp from "@/components/main/NetworkComp";
@@ -21,7 +20,6 @@ export default function Home() {
       <div className="min-h-screen flex flex-col items-center justify-center">
         <Hero />
         <MarqueeDemo />
-        {/*<FeaturesBento />*/}
         <NetworkComp />
         <AboutusComp />
         <TeamComp />
