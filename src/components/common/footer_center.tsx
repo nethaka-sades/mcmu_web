@@ -108,7 +108,7 @@ function StackedCircularFooter() {
               variant="outline"
               size="icon"
             >
-              <Link href={"/fb_portal"}>
+              <Link href={"https://facebook.com/mahanamamediaofficial"}>
                 <RiFacebookFill color="#1778F2" size={16} aria-hidden="true" />
               </Link>
             </Button>
@@ -117,7 +117,7 @@ function StackedCircularFooter() {
               variant="outline"
               size="icon"
             >
-              <Link href={"/fb_portal"}>
+              <Link href={"https://www.instagram.com/mcmu.official"}>
                 <RiInstagramLine color="#bc2a8d" size={16} aria-hidden="true" />
               </Link>
             </Button>
