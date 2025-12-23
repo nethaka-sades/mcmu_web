@@ -20,36 +20,27 @@ const president = [
 const TopBoard = [
   {
     id: "tb-1",
+    name: "Deegayu Jayasinghe",
+    role: "Vice-President",
+    avatar: "/PFPS/sample.webp",
+  },
+  {
+    id: "tb-2",
     name: "Chenura Pathirana",
     role: "Secretary",
     avatar: "/PFPS/chenura.jpg",
   },
   {
-    id: "tb-2",
+    id: "tb-3",
     name: "Pabasara Warnajith",
     role: "Treasurer",
     avatar: "/PFPS/pabasara.jpg",
   },
-];
-
-const HeadBoard = [
   {
-    id: "hb-1",
-    name: "Deegayu Jayasinghe",
-    role: "Vice-President",
-    avatar: "/PFPS/chenura.jpg",
-  },
-  {
-    id: "hb-2",
+    id: "tb-4",
     name: "Tharuja Dhayan",
     role: "Vice-Secretary",
-    avatar: "/PFPS/pabasara.jpg",
-  },
-  {
-    id: "hb-3",
-    name: "Nidarshana Priyababath",
-    role: "Vice-Treasurer",
-    avatar: "/PFPS/pabasara.jpg",
+    avatar: "/PFPS/sample.webp",
   },
 ];
 
@@ -105,24 +96,8 @@ export default function Home() {
             </div>
           </BoxReveal>
           <BoxReveal duration={0.5}>
-            <div className="container mt-16 grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-2">
+            <div className="container mt-16 grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-4">
               {TopBoard.map((member) => (
-                <div key={member.id} className="flex flex-col items-center">
-                  <Avatar className="mb-4 size-20 border md:mb-5 lg:size-24">
-                    <AvatarImage src={member.avatar} />
-                    <AvatarFallback>{member.name}</AvatarFallback>
-                  </Avatar>
-                  <p className="text-center font-medium">{member.name}</p>
-                  <p className="text-accent text-center">
-                    {member.role}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </BoxReveal>
-          <BoxReveal duration={0.5}>
-            <div className="container mt-16 grid gap-x-8 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
-              {HeadBoard.map((member) => (
                 <div key={member.id} className="flex flex-col items-center">
                   <Avatar className="mb-4 size-20 border md:mb-5 lg:size-24">
                     <AvatarImage src={member.avatar} />
