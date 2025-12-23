@@ -4,8 +4,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import React from "react";
 
 import { BoxReveal } from "../../components/common/box-reveal";
-import { InteractiveHoverButton } from "../../components/common/interactivehoverbtn";
-import Link from "next/link";
 import { Header, HeaderTitle } from "../../components/common/header";
 
 const president = [
