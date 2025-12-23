@@ -1,6 +1,4 @@
-import { Twitter, Github, Linkedin } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 import { Header, HeaderTitle } from "../common/header";
 import { BoxReveal } from "../common/box-reveal";
 import { InteractiveHoverButton } from "../common/interactivehoverbtn";
@@ -11,19 +9,19 @@ const team = [
     name: "Chenura Pathirana",
     role: "Secretary",
     image:
-      "/PFPS/chenura.jpg",
+      "/PFPS/chenura.webp",
   },
   {
     name: "Nethaka De Saram",
     role: "President",
     image:
-      "/PFPS/nethaka.jpg",
+      "/PFPS/nethaka.webp",
   },
   {
     name: "Pabasara Warnajith",
     role: "Treasurer",
     image:
-      "/PFPS/pabasara.JPG",
+      "/PFPS/pabasara.webp",
   },
 ];
 

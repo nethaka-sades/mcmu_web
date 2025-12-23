@@ -13,7 +13,7 @@ const president = [
     id: "pres-1",
     name: "Nethaka De Saram",
     role: "President",
-    avatar: "/PFPS/nethaka.jpg",
+    avatar: "/PFPS/nethaka.webp",
   },
 ];
 
@@ -28,13 +28,13 @@ const TopBoard = [
     id: "tb-2",
     name: "Chenura Pathirana",
     role: "Secretary",
-    avatar: "/PFPS/chenura.jpg",
+    avatar: "/PFPS/chenura.webp",
   },
   {
     id: "tb-3",
     name: "Pabasara Warnajith",
     role: "Treasurer",
-    avatar: "/PFPS/pabasara.jpg",
+    avatar: "/PFPS/pabasara.webp",
   },
   {
     id: "tb-4",
