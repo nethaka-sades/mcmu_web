@@ -9,6 +9,7 @@ interface BoxRevealProps {
   width?: "fit-content" | "100%";
   duration?: number;
   direction?: "top" | "bottom";
+  delay?: number;
 }
 
 export const BoxReveal = ({
@@ -17,6 +18,7 @@ export const BoxReveal = ({
   width = "fit-content",
   duration,
   direction = "bottom",
+  delay = 0.25,
 }: BoxRevealProps) => {
   const mainControls = useAnimation();
   const slideControls = useAnimation();
@@ -51,7 +53,7 @@ export const BoxReveal = ({
         }}
         initial="hidden"
         animate={mainControls}
-        transition={{ duration: duration ? duration : 0.5, delay: 0.25 }}
+        transition={{ duration: duration ? duration : 0.5, delay }}
         className={className}
       >
         {children}
