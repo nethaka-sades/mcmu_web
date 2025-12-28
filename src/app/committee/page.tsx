@@ -20,7 +20,7 @@ const TopBoard = [
     id: "tb-1",
     name: "Deegayu Jayasinghe",
     role: "Vice-President",
-    avatar: "/PFPS/sample.webp",
+    avatar: "/PFPS/deegayu.webp",
   },
   {
     id: "tb-2",
@@ -38,7 +38,7 @@ const TopBoard = [
     id: "tb-4",
     name: "Tharuja Dhayan",
     role: "Vice-Secretary",
-    avatar: "/PFPS/sample.webp",
+    avatar: "/PFPS/tharuja.webp",
   },
 ];
 
